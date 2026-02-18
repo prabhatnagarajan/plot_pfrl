@@ -1,4 +1,18 @@
 
+
+def pct_formatter(y, pos):
+    """
+    Args:
+        y (float): Tick value.
+        pos (int): Position.
+        
+    Returns:
+        str: Formatted tick label.
+    """
+    val = y
+    return f'{val:.0f}%'
+
+
 def millions_formatter(x, pos):
     """
     Args:
