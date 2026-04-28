@@ -23,7 +23,14 @@ def find_file(filename, directory):
     for root, dirs, files in os.walk(directory):
         if filename in files:
             return os.path.join(root, filename)
-    assert False, f"directory: {directory}, filename: {filename}"
+    assert False, f"File not found: directory: {directory}, filename: {filename}"
+
+def find_all_files(filename, directory):
+    found_files = []
+    for root, dirs, files in os.walk(directory):
+        if filename in files:
+            found_files.append(os.path.join(root, filename))
+    return found_files
 
 def insert_space_before_capital(s):
     result = s[0]  # Keep the first character as it is
