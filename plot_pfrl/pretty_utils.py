@@ -43,3 +43,9 @@ def insert_space_before_capital(s):
 
 def remove_spaces(org_str):
     return org_str.replace(" ", "")
+
+def atari_env_name_preprocessor(env_name):
+    if "NoFrameskip-v4" in env_name:
+        return env_name.replace("NoFrameskip-v4", "")
+    else:
+        return env_name.replace("-v5", "")

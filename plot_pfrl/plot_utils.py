@@ -18,7 +18,6 @@ def compute_se(curves):
     standard_error = sample_std / np.sqrt(num_datapoints)
     return standard_error
    
-
 def compute_confidence_increment(curves, confidence_level=0.95):
     se = compute_se(curves)
     z_score = compute_z_score(confidence_level)
