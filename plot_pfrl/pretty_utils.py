@@ -40,3 +40,6 @@ def insert_space_before_capital(s):
         else:
             result += char
     return result
+
+def remove_spaces(org_str):
+    return org_str.replace(" ", "")
